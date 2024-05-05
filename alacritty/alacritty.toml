@@ -1,0 +1,16 @@
+import = [
+#  "~/.config/alacritty/colorschemes/dracula.toml"
+]
+
+[shell]
+program = "/bin/zsh"
+args = ["-1"]
+
+[window]
+padding = { x = 15, y = 5 }
+dynamic_padding = true
+opacity = 0.90
+blur = true
+
+[font]
+size = 12
