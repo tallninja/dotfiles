@@ -266,8 +266,16 @@ bar {
     binding_mode       #965D0E #965E0D #FFFFFF
   }
 
+  font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+  font pango:SauceCodeProNerdFont Mono SemiBold 8.1
+
   status_command i3status -c ~/.config/i3/i3status.conf
 }
+
+# Fonts
+font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+font pango:SauceCodeProNerdFont Mono Normal 8.5
+
 
 # Display Wallpaper
 exec_always feh --bg-fill ~/Pictures/Wallpapers/wallpaper4.jpg
