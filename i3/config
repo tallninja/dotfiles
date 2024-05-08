@@ -241,6 +241,7 @@ include ~/.config/i3/i3gaps.conf
 
 for_window [class="OpenGL Window"] floating enable
 for_window [class="Setroubleshoot"] floating enable
+for_window [class="Evolution-alarm-notify"] floating enable
 
 # class                 border  bground text    indicator child_border
 client.focused          #202020 #202020 #FFFFFF #202020   #202020
