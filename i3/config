@@ -208,13 +208,14 @@ mode "$browser_launcher" {
 }
 
 # Tools
-set $tools_launcher Launch Tool: [r]anger [h]top [q]bittorrent
+set $tools_launcher Launch Tool: [r]anger [h]top [q]bittorrent [g]imp
 bindsym $mod+t mode "$tools_launcher"
 
 mode "$tools_launcher" {
         bindsym r exec "$terminal -e ranger"
         bindsym h exec "$terminal -e htop"
         bindsym q exec qbittorrent
+        bindsym g exec gimp
 
         bindsym Escape mode "default"
         bindsym Return mode "default"
