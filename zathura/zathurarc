@@ -17,6 +17,9 @@ set scroll-step 100
 set zoom-min 10
 set guioptions ""
 
+set window-title-basename true
+set window-title-page true
+
 # zathurarc-dark
 
 set font "SauceCodeProNerdFont Mono 15"

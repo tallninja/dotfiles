@@ -104,10 +104,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# .NET
-export ASPNETCORE_Kestrel__Certificates__Default__Password="password"
-export ASPNETCORE_Kestrel__Certificates__Default__Path="/home/tallninja/.certs/localhost.pfx"
-
 # export PATH=$PATH:/home/tallninja/.jdks/openjdk-20.0.1/bin 
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
