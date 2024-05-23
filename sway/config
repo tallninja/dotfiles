@@ -15,6 +15,9 @@ set $menu dmenu_run -b \
 	 -sf '#EEEEEE' \
 	 -fn 'monospace-10'
 
+# Enables inhibit_idle when playing audio
+exec sway-audio-idle-inhibit
+
 # Clipboard tool
 # https://github.com/sentriz/cliphist
 set $cliphist $HOME/go/bin/cliphist
