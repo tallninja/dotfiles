@@ -44,6 +44,11 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +2%
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 2%-
 
+# Take screenshots
+set $prtsc_fp $(xdg-user-dir PICTURES)/$(date +'Screenshot_%y-%m-%d_%T-%N.png')
+bindsym Print exec grim $prtsc_fp
+bindsym $mod+Print exec grim -g "$(slurp)" $prtsc_fp
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
