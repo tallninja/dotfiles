@@ -43,7 +43,7 @@ include gaps.conf
 floating_modifier $mod
 
 # Default workspace layout default|stacking|tabbed
-workspace_layout tabbed
+# workspace_layout tabbed
 
 for_window [class="OpenGL Window"] floating enable
 for_window [class="Setroubleshoot"] floating enable

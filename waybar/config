@@ -5,7 +5,7 @@
     // "width": 1366, // Waybar width
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-center": ["sway/window"],
+    // "modules-center": ["sway/window"],
     "modules-right": ["custom/audio_idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "battery", "tray", "clock"],
     
     "sway/workspaces": {
