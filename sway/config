@@ -14,7 +14,7 @@ exec "dbus-update-activation-environment --systemd XDG_CURRENT_DESKTOP=sway"
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu 'rofi -modi run, drun, window  -show drun'
+set $menu 'rofi -modi run, drun, window  -show drun -show-icons'
 # set $menu bemenu-run -b -p "" --tb "#285577" --hb "#285577" --tf "#eeeeee" --hf "#eeeeee" --nf "#bbbbbb"
 # set $menu wmenu -b
 # set $menu dmenu_run -b \

@@ -1,1 +1,5 @@
-@theme "Monokai"
+configuration {
+
+}
+@import "squared-nord"
+@theme "squared-nord"
