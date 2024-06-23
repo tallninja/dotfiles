@@ -20,14 +20,8 @@ vim.opt.rtp:prepend(lazypath)
 -- Install plugins
 require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
-  
-  -- Detect tabstop and shiftwidth automatically
-  'tpope/vim-sleuth',
-
-  -- "gc" to comment visual regions/lines
-  { 'numToStr/Comment.nvim', opts = {} },
-
-
+  'tpope/vim-sleuth',                         -- Detect tabstop and shiftwidth automatically
+  { 'numToStr/Comment.nvim', opts = {} },     -- "gc" to comment visual regions/line
   require 'plugins/colorscheme',
   require 'plugins/oil',
   require 'plugins/transparent',

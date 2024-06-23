@@ -1,52 +1,25 @@
--- Make line numbers default
-vim.opt.number = true
+-- :help options
 
--- Mouse mode
-vim.opt.mouse = 'a'
+vim.opt.number = true                     -- Make line numbers default
+vim.opt.mouse = 'a'                       -- Mouse mode in all modes
+vim.opt.showmode = false                  -- Don't show the mode
+vim.opt.clipboard = 'unnamedplus'         -- Sync system and neovim clipboard
+vim.opt.breakindent = true                -- Breakindent
+vim.opt.undofile = true                   -- Save undo history
+vim.opt.hlsearch = true                   -- Set highlight search on
+vim.opt.ignorecase = true                 -- Case-insensitive searching
+vim.opt.smartcase = true                  -- Use smart case search
+vim.opt.updatetime = 250                  -- Decrease update time
+vim.opt.timeoutlen = 300                  -- Decrease mapped sequence wait time. Displays which-key popup sooner
+vim.opt.splitright = true                 -- Enable right split
+vim.opt.splitbelow = true                 -- Enable bottom split
+vim.opt.inccommand = 'split'              -- Preview substitutions live, as you type
+vim.opt.scrolloff = 10                    -- Minimal number of screen lines to keep above and below the cursor.
+-- vim.opt.signcolumn = 'yes'             -- Keep signcolumn on by default
+-- vim.opt.cursorline = true              -- Show which line your cursor is on
+-- vim.opt.cursorlineopt = 'number'       -- Show line on line number
+-- vim.opt.list = true                    -- Enable list mode. Useful to see the fifference between tabs and spaces
 
--- Don't show the mode
-vim.opt.showmode = false
+-- vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }  -- Sets how neovim will display certain whitespace characters in the editor.
 
--- Sync system and neovim clipboard
-vim.opt.clipboard = 'unnamedplus'
 
--- Breakindent
-vim.opt.breakindent = true
-
--- Save undo history
-vim.opt.undofile = true
-
--- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
-
--- Keep signcolumn on by default
--- vim.opt.signcolumn = 'yes'
-
--- Decrease update time
-vim.opt.updatetime = 250
-
--- Decrease mapped sequence wait time
--- Displays which-key popup sooner
-vim.opt.timeoutlen = 300
-
--- Configure how new splits should be opened
-vim.opt.splitright = true
-vim.opt.splitbelow = true
-
--- Sets how neovim will display certain whitespace characters in the editor.
--- vim.opt.list = true
--- vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
-
--- Preview substitutions live, as you type!
-vim.opt.inccommand = 'split'
-
--- Show which line your cursor is on
--- vim.opt.cursorline = true
--- vim.opt.cursorlineopt = 'number'
-
--- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.scrolloff = 10
-
--- Set highlight search on
-vim.opt.hlsearch = true
