@@ -5,6 +5,12 @@ set $alt-mod Mod1
 
 set $terminal alacritty
 
+# See: https://www.reddit.com/r/swaywm/comments/14lf3yl/comment/k70hsrl
+# Prophylactically applies current env vars to dbus and systemd
+exec "dbus-update-activation-environment --systemd --all"
+# Applies XDG_CURRENT_DESKTOP=sway to dbus and systemd
+exec "dbus-update-activation-environment --systemd XDG_CURRENT_DESKTOP=sway"
+
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.

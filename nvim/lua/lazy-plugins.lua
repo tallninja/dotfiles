@@ -20,12 +20,18 @@ vim.opt.rtp:prepend(lazypath)
 -- Install plugins
 require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
+  
+  -- Plugins
   'tpope/vim-sleuth',                         -- Detect tabstop and shiftwidth automatically
+  { 'wakatime/vim-wakatime', lazy = false },
   { 'numToStr/Comment.nvim', opts = {} },     -- "gc" to comment visual regions/line
-  require 'plugins/colorscheme',
   require 'plugins/oil',
   require 'plugins/transparent',
   require 'plugins/treesitter',
+  require 'plugins/todo-comments',
+
+  -- Color Schemes
+  require 'themes/colorscheme',
 },{
   ui = {
   -- If you are using a Nerd Font: set icons to an empty table which will use the
