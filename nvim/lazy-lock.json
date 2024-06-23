@@ -1,6 +1,9 @@
 {
   "Comment.nvim": { "branch": "master", "commit": "e30b7f2008e52442154b66f7c519bfd2f1e32acb" },
+  "LazyVim": { "branch": "main", "commit": "b47c65f4087c4d82720ab7439f395aba5d6b5f40" },
+  "gruvbox.nvim": { "branch": "main", "commit": "d4cde3853a172485961b515c36d51d757728d6e6" },
   "lazy.nvim": { "branch": "main", "commit": "4ea9fe060042f345960ad0c01aa7bca91405e10a" },
+  "mini.nvim": { "branch": "main", "commit": "63c21a99e60ee59456faa4e5a245c59eeacac4d9" },
   "nvim-treesitter": { "branch": "master", "commit": "a8904e7f833e9302232484986c5807f9b8aa43fb" },
   "nvim-web-devicons": { "branch": "master", "commit": "c0cfc1738361b5da1cd0a962dd6f774cc444f856" },
   "oil.nvim": { "branch": "master", "commit": "65c53dbe4f2140236590a7568a5f22a77d16be39" },

@@ -25,6 +25,8 @@ require('lazy').setup({
   'tpope/vim-sleuth',                         -- Detect tabstop and shiftwidth automatically
   { 'wakatime/vim-wakatime', lazy = false },
   { 'numToStr/Comment.nvim', opts = {} },     -- "gc" to comment visual regions/line
+  
+  require 'plugins/mini',
   require 'plugins/oil',
   require 'plugins/transparent',
   require 'plugins/treesitter',
