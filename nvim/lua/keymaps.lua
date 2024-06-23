@@ -1,5 +1,7 @@
 -- My vim keymaps
 
+vim.g.mapleader = ' '
+
 -- Set highlight search off on pressing <Esc> in normal mode
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
