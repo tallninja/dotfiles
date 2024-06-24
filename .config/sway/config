@@ -62,11 +62,11 @@ default_border pixel 1
 # default_floating_border normal
 
 # class                 border  bground text    indicator child_border
-client.focused          #202020 #202020 #FFFFFF #202020   #202020
-client.focused_inactive #282828 #282828 #FFFFFF #282828   #282828
+client.focused          #202020 #202020 #D4BE98 #202020   #202020
+client.focused_inactive #282828 #282828 #D4BE98 #282828   #282828
 client.unfocused        #32302F #32302F #888888 #32302F   #32302F
-client.urgent           #32302F #32302F #FFFFFF #32302F   #32302F
-client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
+client.urgent           #32302F #32302F #D4BE98 #32302F   #32302F
+client.placeholder      #000000 #0C0C0C #D4BE98 #000000   #0C0C0C
 
 client.background       #FFFFFF
 
