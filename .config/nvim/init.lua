@@ -1,11 +1,2 @@
--- My NeoVim Configuration
--- Inspired by kickstart
---
--- Custom options
-require 'options'
-
--- Custom keymaps
-require 'keymaps'
-
--- Lazy plugins
-require 'lazy-plugins'
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")
