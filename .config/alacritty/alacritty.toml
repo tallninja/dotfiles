@@ -1,0 +1,20 @@
+import = [
+#  "~/.config/alacritty/colorschemes/dracula.toml"
+]
+
+[shell]
+program = "/bin/zsh"
+args = ["-1"]
+
+[window]
+padding = { x = 15, y = 5 }
+dynamic_padding = true
+opacity = 0.80
+blur = true
+
+[font]
+size = 12
+normal = { family = "SauceCodeProNerdFont", style = "Medium" }
+bold = { family = "SauceCodeProNerdFont", style = "Bold" }
+italic = { family = "SauceCodeProNerdFont", style= "Italic" }
+bold_italic = { family = "SauceCodeProNerdFont", style = "BoldItalic" }
