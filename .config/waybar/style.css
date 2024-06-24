@@ -29,16 +29,20 @@ window#waybar {
 }
 
 #workspaces button.focused {
-    color: #c9545d;
-    border-top: 2px solid #c9545d;
+    color: #fb4934;
+    border-top: 2px solid #fb4934;
 }
 
 #mode {
-    background: #64727D;
-    border-bottom: 3px solid white;
+    background: #d79921;
+    color: #282828;
+    padding: 0 3px;
+    margin: 0 5px;
+    font-weight: bold;
+    /* border-bottom: 3px solid white; */
 }
 
-#clock, #battery, #cpu, #memory, #network, #pulseaudio, #custom-spotify, #tray, #mode {
+#clock, #battery, #cpu, #memory, #network, #pulseaudio, #custom-spotify, #tray {
     padding: 0 3px;
     margin: 0 5px;
     color: #d4be98;
