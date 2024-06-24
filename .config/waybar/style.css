@@ -7,7 +7,7 @@
 }
 
 window#waybar {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(40, 40, 40, 0.7);
     color: white;
 }
 
@@ -24,7 +24,7 @@ window#waybar {
 #workspaces button {
     padding: 0 5px;
     background: transparent;
-    color: white;
+    color: #d4be98;
     border-top: 2px solid transparent;
 }
 
@@ -41,6 +41,7 @@ window#waybar {
 #clock, #battery, #cpu, #memory, #network, #pulseaudio, #custom-spotify, #tray, #mode {
     padding: 0 3px;
     margin: 0 5px;
+    color: #d4be98;
 }
 
 #clock {
@@ -55,18 +56,17 @@ window#waybar {
 }
 
 #battery.charging {
-   color: #00ff00;
+   color: #98971a;
 }
 
 @keyframes blink {
     to {
-        background-color: #ffffff;
-        color: black;
+        color: #cc241d;
     }
 }
 
 #battery.warning:not(.charging) {
-    color: white;
+    color: #d4be98;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
