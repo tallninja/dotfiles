@@ -1,0 +1,5 @@
+configuration {
+
+}
+@import "squared-nord"
+@theme "squared-nord"
