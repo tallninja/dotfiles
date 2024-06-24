@@ -1,6 +1,4 @@
-import = [
-#  "~/.config/alacritty/colorschemes/dracula.toml"
-]
+import = ["~/.config/alacritty/themes/gruvbox_material_medium_dark.toml"]
 
 [shell]
 program = "/bin/zsh"
@@ -16,5 +14,5 @@ blur = true
 size = 12
 normal = { family = "SauceCodeProNerdFont", style = "Medium" }
 bold = { family = "SauceCodeProNerdFont", style = "Bold" }
-italic = { family = "SauceCodeProNerdFont", style= "Italic" }
+italic = { family = "SauceCodeProNerdFont", style = "Italic" }
 bold_italic = { family = "SauceCodeProNerdFont", style = "BoldItalic" }
