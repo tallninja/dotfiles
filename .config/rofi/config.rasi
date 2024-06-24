@@ -1,5 +1,6 @@
 configuration {
 
 }
-@import "squared-nord"
-@theme "squared-nord"
+
+@import "gruvbox-material"
+@theme "gruvbox-material"
