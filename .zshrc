@@ -111,16 +111,16 @@ export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # pnpm
-export PNPM_HOME="/home/tallninja/.local/share/pnpm"
+export PNPM_HOME="$HOME/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
 
-export PATH=$PATH:"/home/tallninja/.local/bin"
-
-export PATH="$PATH:/home/tallninja/.local/share/JetBrains/Toolbox/scripts"
+export PATH=$PATH:"$HOME/.local/bin"
+export PATH=$PATH:"$HOME/go/bin"
+export PATH="$PATH:$HOME/.local/share/JetBrains/Toolbox/scripts"
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/terraform terraform
