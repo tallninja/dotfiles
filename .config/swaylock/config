@@ -1,0 +1,14 @@
+ignore-empty-password
+show-failed-attempts
+indicator-caps-lock
+tiling
+
+color=282828
+
+line-uses-inside
+indicator-radius=100
+indicator-thickness=15
+
+# key-hl-color=D79921
+# separator-color=D79921
+# ring-color=98971A

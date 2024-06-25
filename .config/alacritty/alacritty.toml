@@ -7,7 +7,7 @@ args = ["-1"]
 [window]
 padding = { x = 15, y = 5 }
 dynamic_padding = true
-opacity = 0.80
+opacity = 0.70
 blur = true
 
 [font]
