@@ -54,6 +54,10 @@ floating_modifier $mod
 # Default workspace layout default|stacking|tabbed
 # workspace_layout tabbed
 
+# Syncthingtray
+# See: https://github.com/Martchus/syncthingtray?tab=readme-ov-file#workaround-positioning-issues-under-wayland
+for_window [title="^Syncthing Tray( \(.*\))?$"] floating enable, border none, resize set 450 400, move position 916 0
+
 for_window [class="OpenGL Window"] floating enable
 for_window [class="Setroubleshoot"] floating enable
 for_window [class="Evolution-alarm-notify"] floating enable
