@@ -24,6 +24,16 @@ set $menu 'rofi -modi run, drun, window  -show drun -show-icons'
 # 	 -sf '#EEEEEE' \
 # 	 -fn 'monospace-10'
 
+
+
+# Autostart syncthingtray
+exec swaymsg "exec syncthingtray --wait;"
+# exec swaymsg "workspace 8; exec syncthingtray --wait;"
+
+# Autostart KeePassXC
+# exec --no-startup-id keepassxc
+exec swaymsg "exec cat ~/Documents/KeePassXC/pw.txt | keepassxc --pw-stdin ~/KeePassXC/Passwords.kdbx;"
+
 # Enables inhibit_idle when playing audio
 exec sway-audio-idle-inhibit
 
