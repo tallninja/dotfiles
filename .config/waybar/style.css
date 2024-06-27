@@ -43,7 +43,7 @@ window#waybar {
     /* border-bottom: 3px solid white; */
 }
 
-#clock, #battery, #cpu, #memory, #disk, #network, #pulseaudio, #custom-spotify, #tray {
+#clock, #idle_inhibitor, #battery, #cpu, #memory, #disk, #network, #pulseaudio, #custom-spotify, #tray {
     padding: 0 3px;
     margin: 0 5px;
     color: #d4be98;
