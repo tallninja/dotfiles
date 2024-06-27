@@ -32,7 +32,7 @@ exec swaymsg "exec syncthingtray --wait;"
 
 # Autostart KeePassXC
 # exec --no-startup-id keepassxc
-exec swaymsg "exec sh -c 'sleep 30; exec cat ~/Documents/KeePassXC/pw.txt | keepassxc --pw-stdin ~/KeePassXC/Passwords.kdbx;'"
+exec swaymsg "exec sh -c 'sleep 60; exec keepassxc ~/KeePassXC/Passwords.kdbx;'"
 
 # Enables inhibit_idle when playing audio
 exec sway-audio-idle-inhibit
