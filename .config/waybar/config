@@ -5,8 +5,8 @@
     // "width": 1366, // Waybar width
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode"],
-    // "modules-center": ["sway/window"],
-    "modules-right": ["custom/audio_idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "battery", "tray", "clock"],
+    "modules-center": ["clock"],
+    "modules-right": ["custom/audio_idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "disk", "battery", "tray"],
     
     "sway/workspaces": {
         "disable-scroll": true,
@@ -35,7 +35,22 @@
     },
 
     "clock": {
-        "format-alt": "{:%Y-%m-%d}"
+        "format": "{:%a %H:%M}",
+        "format-alt": "{:%Y-%m-%d}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode"          : "year",
+            "mode-mon-col"  : 3,
+            "weeks-pos"     : "right",
+            "on-scroll"     : 1,
+            "format": {
+                "months":     "<span color='#ffead3'><b>{}</b></span>",
+                "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+                "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+            }
+        },
     },
 
     "cpu": {
@@ -44,6 +59,13 @@
 
     "memory": {
         "format": "{}% 󰘚"
+    },
+
+    "disk": {
+        "interval": 30,
+        "unit": "GB",
+        "format": "{percentage_free}% ",
+        "format-alt": "{specific_free:0.2f} GB 󰋊"
     },
 
     "battery": {
