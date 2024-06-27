@@ -67,10 +67,9 @@ floating_modifier $mod
 # Syncthingtray
 # See: https://github.com/Martchus/syncthingtray?tab=readme-ov-file#workaround-positioning-issues-under-wayland
 for_window [title="^Syncthing Tray( \(.*\))?$"] floating enable, border none, resize set 450 400, move position 916 0
-
 # KeePassXC
 for_window [title="KeePassXC - Browser Access Request"] floating enable, border none
-
+for_window [title="Sign In - Google Accounts — Mozilla Firefox"] floating enable, border none
 for_window [class="OpenGL Window"] floating enable
 for_window [class="Setroubleshoot"] floating enable
 for_window [class="Evolution-alarm-notify"] floating enable
