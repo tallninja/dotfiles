@@ -56,7 +56,8 @@ window#waybar {
 #custom-power, 
 #custom-reboot,
 #custom-lock,
-#custom-quit {
+#custom-quit,
+#custom-audio_idle_inhibitor {
     padding: 0 3px;
     margin: 0 5px;
     color: #d4be98;
@@ -74,6 +75,7 @@ window#waybar {
 }
 
 #battery.charging {
+  color: #689d6a;
 }
 
 @keyframes blink {
