@@ -35,7 +35,7 @@ exec swaymsg "exec syncthingtray --wait;"
 exec swaymsg "exec sh -c 'sleep 60; exec keepassxc ~/KeePassXC/Passwords.kdbx;'"
 
 # Autostart qBittorrent
-exec swaymsg "exec sh -c 'sleep 60; exec qbittorrent --no-splash;'"
+# exec swaymsg "exec sh -c 'sleep 60; exec qbittorrent --no-splash;'"
 
 # Enables inhibit_idle when playing audio
 exec sway-audio-idle-inhibit
