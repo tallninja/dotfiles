@@ -34,6 +34,9 @@ exec swaymsg "exec syncthingtray --wait;"
 # exec --no-startup-id keepassxc
 exec swaymsg "exec sh -c 'sleep 60; exec keepassxc ~/KeePassXC/Passwords.kdbx;'"
 
+# Autostart qBittorrent
+exec swaymsg "exec sh -c 'sleep 60; exec qbittorrent;'"
+
 # Enables inhibit_idle when playing audio
 exec sway-audio-idle-inhibit
 
@@ -48,9 +51,11 @@ bindsym $mod+c exec rofi -show clipboard -modes "clipboard:~/.config/sway/script
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
 exec swayidle -w \
-     timeout 300 'swaylock' \
-     timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-     before-sleep 'swaylock'
+     timeout 300 'swaylock -f' \
+     timeout 450 'swaymsg "output * power off"' \
+          resume 'swaymsg "output * power on"' \
+     timeout 600 'systemctl suspend' \
+     before-sleep 'swaylock -f'
 
 # Keybindings
 include keybindings.conf
