@@ -129,3 +129,5 @@ export PATH="$PATH:$HOME/.local/share/JetBrains/Toolbox/scripts"
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/terraform terraform
 
+
+export PATH=$PATH:/home/tallninja/.spicetify
