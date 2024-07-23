@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+CLIPHIST=$HOME/go/bin/cliphist
+
+if [ -z "$1" ]; then
+    $CLIPHIST list
+else
+    $CLIPHIST decode <<<"$1" | wl-copy
+fi
