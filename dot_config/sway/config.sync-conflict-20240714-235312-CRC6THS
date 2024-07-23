@@ -1,0 +1,104 @@
+# Please see https://i3wm.org/docs/userguide.html for a complete reference!
+
+set $mod Mod4
+set $alt-mod Mod1
+
+set $terminal alacritty
+
+# See: https://www.reddit.com/r/swaywm/comments/14lf3yl/comment/k70hsrl
+# Prophylactically applies current env vars to dbus and systemd
+exec "dbus-update-activation-environment --systemd --all"
+# Applies XDG_CURRENT_DESKTOP=sway to dbus and systemd
+exec "dbus-update-activation-environment --systemd XDG_CURRENT_DESKTOP=sway"
+
+# Your preferred application launcher
+# Note: pass the final command to swaymsg so that the resulting window can be opened
+# on the original workspace that the command was run on.
+set $menu 'rofi -modi run, drun, window  -show drun -show-icons'
+# set $menu bemenu-run -b -p "" --tb "#285577" --hb "#285577" --tf "#eeeeee" --hf "#eeeeee" --nf "#bbbbbb"
+# set $menu wmenu -b
+# set $menu dmenu_run -b \
+# 	 -nf '#BBBBBB' \
+# 	 -nb '#222222' \
+# 	 -sb '#005577' \
+# 	 -sf '#EEEEEE' \
+# 	 -fn 'monospace-10'
+
+
+
+# Autostart syncthingtray
+exec swaymsg "exec syncthingtray --wait;"
+# exec swaymsg "workspace 8; exec syncthingtray --wait;"
+
+# Autostart KeePassXC
+# exec --no-startup-id keepassxc
+exec swaymsg "exec sh -c 'sleep 60; exec keepassxc ~/KeePassXC/Passwords.kdbx;'"
+
+# Autostart qBittorrent
+# exec swaymsg "exec sh -c 'sleep 60; exec qbittorrent --no-splash;'"
+
+# Enables inhibit_idle when playing audio
+exec sway-audio-idle-inhibit
+
+# Clipboard tool
+# https://github.com/sentriz/cliphist
+set $cliphist $HOME/go/bin/cliphist
+exec wl-paste --type text --watch $cliphist store
+exec wl-paste --type images --watch $cliphist store
+bindsym $mod+c exec rofi -show clipboard -modes "clipboard:~/.config/sway/scripts/cliphist-rofi"
+
+# This will lock your screen after 300 seconds of inactivity, then turn off
+# your displays after another 300 seconds, and turn your screens back on when
+# resumed. It will also lock your screen before your computer goes to sleep.
+exec swayidle -w \
+     timeout 300 'swaylock -f' \
+     timeout 450 'swaymsg "output * power off"' \
+          resume 'swaymsg "output * power on"' \
+     timeout 600 'systemctl suspend' \
+     before-sleep 'swaylock -f'
+
+# Keybindings
+include keybindings.conf
+
+# Gaps
+include gaps.conf
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# Default workspace layout default|stacking|tabbed
+# workspace_layout tabbed
+
+# Syncthingtray
+# See: https://github.com/Martchus/syncthingtray?tab=readme-ov-file#workaround-positioning-issues-under-wayland
+for_window [title="^Syncthing Tray( \(.*\))?$"] floating enable, border none, resize set 450 400, move position 916 0
+# KeePassXC
+for_window [title="KeePassXC - Browser Access Request"] floating enable, border none
+for_window [title="Sign In - Google Accounts — Mozilla Firefox"] floating enable, border none
+for_window [class="OpenGL Window"] floating enable
+for_window [class="Setroubleshoot"] floating enable
+for_window [class="Evolution-alarm-notify"] floating enable
+for_window [class="File Operation Progress"] floating enable
+
+default_border pixel 1
+# default_floating_border normal
+
+# class                 border  bground text    indicator child_border
+client.focused          #202020 #202020 #D4BE98 #98971A   #98971A
+client.focused_inactive #282828 #282828 #D4BE98 #282828   #282828
+client.unfocused        #32302F #32302F #888888 #32302F   #32302F
+client.urgent           #FB4934 #32302F #D4BE98 #FB4934   #FB4934
+client.placeholder      #000000 #0C0C0C #D4BE98 #000000   #0C0C0C
+
+client.background       #282828
+
+# Launch status bar
+bar {
+  swaybar_command waybar
+}
+
+# Fonts
+font pango:SauceCodeProNerdFont Mono Normal 8.5
+
+# Display Wallpaper
+output * bg ~/Pictures/Wallpapers/wallpaper15.png fill
