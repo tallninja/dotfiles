@@ -4,9 +4,20 @@
     "height": 24, // Waybar height
     // "width": 1366, // Waybar width
     // Choose the order of the modules
-    "modules-left": ["sway/workspaces", "custom/spotify", "sway/mode"],
+    "modules-left": [
+      "sway/workspaces", 
+      "custom/spotify", 
+      "sway/mode"
+    ],
     "modules-center": ["clock"],
-    "modules-right": ["custom/audio_idle_inhibitor", "idle_inhibitor", "group/hardware", "tray", "network", "battery", "group/group-power"],
+    "modules-right": [
+      "custom/audio_idle_inhibitor", 
+      "idle_inhibitor", 
+      "group/hardware", 
+      "tray", "network", 
+      "group/battery-power-profiles", 
+      "group/power"
+    ],
     // "modules-right": ["custom/audio_idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "disk", "battery", "tray"],
     
     "sway/workspaces": {
@@ -83,6 +94,18 @@
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
+    },
+
+    "power-profiles-daemon": {
+      "format": "{icon}",
+      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+      "tooltip": true,
+      "format-icons": {
+        "default": "",
+        "performance": "",
+        "balanced": "",
+        "power-saver": ""
+      }
     },
 
     "network": {
@@ -187,7 +210,20 @@
       "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
     },
 
-    "group/group-power": {
+    "group/battery-power-profiles": {
+      "orientation": "inherit",
+      "drawer": {
+          "transition-duration": 500,
+          "children-class": "not-power",
+          "transition-left-to-right": false,
+      },
+      "modules": [
+          "battery", // First element is the "group leader" and won't ever be hidden
+          "power-profiles-daemon",
+      ]
+    },
+
+    "group/power": {
       "orientation": "inherit",
       "drawer": {
           "transition-duration": 500,
