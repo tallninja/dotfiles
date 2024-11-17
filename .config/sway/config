@@ -100,4 +100,5 @@ bar {
 font pango:SauceCodeProNerdFont Mono Normal 8.5
 
 # Display Wallpaper
-output * bg ~/Pictures/Wallpapers/wallpaper15.png fill
+output * bg ~/Pictures/Wallpapers/wallpaper26.png fill
+# output * bg ~/Pictures/Wallpapers/wallpaper15.png fill
